@@ -1,40 +1,45 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Node modules (for both FE and BE)
+node_modules/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
+# Logs
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# Environment variable files (for both FE and BE)
+.env
+.env.local
+.env.*.local
 
-# vercel
-.vercel
+# Build directories
+/dist
+/build
+/public
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Coverage (for test reports)
+/coverage
+
+# OS-specific files
+.DS_Store          # macOS
+Thumbs.db           # Windows
+
+# IDE and editor configurations
+.vscode/            # VS Code
+.idea/              # JetBrains IDEs
+
+# Front-end specific
+frontend/node_modules/  # Frontend node_modules if separated
+frontend/.env            # Frontend .env if separated
+frontend/dist/           # Frontend build files
+frontend/build/          # Frontend build files
+
+# Back-end specific
+backend/node_modules/    # Backend node_modules if separated
+backend/.env             # Backend .env file if separated
+backend/dist/            # Backend build files (e.g., transpiled code)
+
+# NPM package lock files (optional, depending on your setup)
+# package-lock.json
+# npm-shrinkwrap.json
